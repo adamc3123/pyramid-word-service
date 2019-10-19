@@ -4,18 +4,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * A pyramid word must have characters of increasing frequency with no
- * gaps and no duplications. This means pyramid words have restricted character
- * lengths. For example, a length of 3 is valid because ann is a valid pyramid
- * word, however a length of 4 is not valid because the frequency of letters
- * will have duplicates.
+ * This class checks if a string is a pyramid word.
+ *
+ * A word is a pyramid word if you can arrange the letters in increasing frequency
+ * starting from 1 and continuing without gaps and without duplicates
+ *
+ * Note: In this implementation, spaces and special characters can be used to create
+ * valid pyramid words
  */
 public class Pyramid {
 
     /**
+     * This method checks if the provided string is a pyramid word.
      *
-     * @param testStr
-     * @return
+     * First, the length of the string is verified to ensure a pyramid word
+     * is possible. Then, each letter in the string is placed into a hash table
+     * where the letter is the key and and the frequency of the letter is the
+     * value. Finally, the keys in the hash table are placed into an array using the
+     * key's value as the index. If a key is greater than the size of the array or
+     * two keys map to the same index, the string is not a pyramid word.
+     *
+     * @param testStr string to check
+     * @return true if testStr is a pyramid word, otherwise false
      */
     public static Boolean solvePyramid(String testStr) {
         int numUniqueLets = 0;
@@ -69,7 +79,14 @@ public class Pyramid {
      * Where n must be a whole number representing the number of different
      * letters possible in a pyramid word of length strLen.
      *
-     * @param strLen
+     * Since pyramid words must have characters of increasing frequency with no
+     * gaps and no duplications there is a restriction on string length. For example,
+     * a length of 3 is valid because 1 char + 2 chars is a valid pyramid word, however
+     * a length of 4 is not valid because the frequency of letters will have duplicates.
+     * This quick check saves times when a provided string is not the correct pyramid word
+     * length.
+     *
+     * @param strLen length of the word being checked
      * @return the number of distinct letters that can be present in the string
      * for the string to be a pyramid word
      */

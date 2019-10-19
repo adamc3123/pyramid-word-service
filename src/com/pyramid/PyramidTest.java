@@ -18,6 +18,7 @@ public class PyramidTest {
         set.add("aaadfavadfavdavdadvasdvkanvlakdv");
         set.add("heelllooo");
         set.add("11112222aaabbc");
+        set.add("1   222");
 
         return set;
     }
@@ -32,6 +33,8 @@ public class PyramidTest {
         set.add("1");
         set.add("banana");
         set.add("322133");
+        set.add("   112");
+        set.add("@@@!!#");
         set.add("1223334444");
         set.add("nan");
         set.add("abbcccddddeeeee");
