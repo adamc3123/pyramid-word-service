@@ -64,6 +64,10 @@ public class PyramidServer {
         int port = 0;
         PyramidServer server = null;
 
+        if (args.length < 1) {
+            System.out.println("Usage: PyramidSever <port>");
+        }
+
         try{
             port  = Integer.parseInt(args[0]);
             if (port <= 0) {

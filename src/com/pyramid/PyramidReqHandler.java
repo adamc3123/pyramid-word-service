@@ -19,7 +19,6 @@ public class PyramidReqHandler implements HttpHandler {
 
             // Remove '/' from the URL
             reqUrl = reqUrl.substring(1);
-            System.out.println(reqUrl);
 
             pyr = Pyramid.solvePyramid(reqUrl);
             httpExchange.sendResponseHeaders(STATUS_OK, pyr.toString().length());
