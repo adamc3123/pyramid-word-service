@@ -3,7 +3,7 @@ package com.pyramid;
 import java.util.ArrayList;
 
 /**
- * Pyramid implementation testing class
+ * Pyramid word check testing class
  */
 public class PyramidTest {
 
